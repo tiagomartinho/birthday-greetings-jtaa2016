@@ -30,8 +30,8 @@ public class Employee {
 		return firstName;
 	}
 
-	public String getFax() {
-		return fax;
+	public boolean hasValidFax() {
+		return !"".equals(fax);
 	}
 
 	@Override
