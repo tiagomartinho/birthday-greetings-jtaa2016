@@ -9,7 +9,7 @@ import com.dumbster.smtp.*;
 
 public class AcceptanceTest {
 
-	private static final int NONSTANDARD_PORT = 9999;
+	private static final int NONSTANDARD_PORT = 9991;
 	private BirthdayService birthdayService;
 	private SimpleSmtpServer mailServer;
 
