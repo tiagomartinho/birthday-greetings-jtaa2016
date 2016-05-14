@@ -78,4 +78,18 @@ public class AcceptanceTest {
 
 		assertEquals("what? messages?", 0, mailServer.getReceivedEmailSize());
 	}
+
+	@Test
+	public void willSendGreetings_whenItsSomebodysBirthdayReadingFromJSON() throws Exception {
+
+		birthdayService.sendGreetings("employee_data.json", new XDate("2008/10/08"), "localhost", NONSTANDARD_PORT);
+
+		assertEquals("message not sent?", 1, mailServer.getReceivedEmailSize());
+		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
+		assertEquals("Happy Birthday, dear John!", message.getBody());
+		assertEquals("Happy Birthday!", message.getHeaderValue("Subject"));
+		String[] recipients = message.getHeaderValues("To");
+		assertEquals(1, recipients.length);
+		assertEquals("john.doe@foobar.com", recipients[0].toString());
+	}
 }
