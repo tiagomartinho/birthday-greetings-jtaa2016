@@ -13,7 +13,7 @@ import java.io.IOException;
 import java.text.ParseException;
 import java.util.List;
 
-public class BirthdayService {
+public class GreetingService {
 
     public void sendGreetings(String fileName, XDate xDate, String smtpHost, int smtpPort) throws IOException, ParseException, MessagingException {
         List<Employee> employees = EmployeeParser.parse(fileName);

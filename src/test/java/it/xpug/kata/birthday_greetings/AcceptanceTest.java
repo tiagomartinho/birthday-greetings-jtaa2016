@@ -12,13 +12,13 @@ import java.util.Iterator;
 public class AcceptanceTest {
 
 	private static final int NONSTANDARD_PORT = 9978;
-	private BirthdayService birthdayService;
+	private GreetingService greetingService;
 	private SimpleSmtpServer mailServer;
 
 	@Before
 	public void setUp() throws Exception {
 		mailServer = SimpleSmtpServer.start(NONSTANDARD_PORT);
-		birthdayService = new BirthdayService();
+		greetingService = new GreetingService();
 	}
 
 	@After
@@ -30,7 +30,7 @@ public class AcceptanceTest {
 	@Test
 	public void willSendGreetings_whenItsSomebodysBirthday() throws Exception {
 
-		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/10/08"), "localhost", NONSTANDARD_PORT);
+		greetingService.sendGreetings("employee_data.csv", new XDate("2008/10/08"), "localhost", NONSTANDARD_PORT);
 
 		assertEquals("message not sent?", 1, mailServer.getReceivedEmailSize());
 		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
@@ -43,7 +43,7 @@ public class AcceptanceTest {
 
 	@Test
 	public void willSendGreetingsByFax_whenItsSomebodysBirthday() throws Exception {
-		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/03/11"), "localhost", NONSTANDARD_PORT);
+		greetingService.sendGreetings("employee_data.csv", new XDate("2008/03/11"), "localhost", NONSTANDARD_PORT);
 		assertEquals("message not sent?", 2, mailServer.getReceivedEmailSize());
 		SmtpMessage message = new SmtpMessage();
 		Iterator receivedEmail = mailServer.getReceivedEmail();
@@ -61,7 +61,7 @@ public class AcceptanceTest {
 	@Test
 	public void willSendGreetings_whenItsEaster() throws Exception {
 
-		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/03/23"), "localhost", NONSTANDARD_PORT);
+		greetingService.sendGreetings("employee_data.csv", new XDate("2008/03/23"), "localhost", NONSTANDARD_PORT);
 
 		assertEquals("message not sent?", 4, mailServer.getReceivedEmailSize());
 		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
@@ -74,7 +74,7 @@ public class AcceptanceTest {
 
 	@Test
 	public void willNotSendEmailsWhenNobodysBirthday() throws Exception {
-		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/01/01"), "localhost", NONSTANDARD_PORT);
+		greetingService.sendGreetings("employee_data.csv", new XDate("2008/01/01"), "localhost", NONSTANDARD_PORT);
 
 		assertEquals("what? messages?", 0, mailServer.getReceivedEmailSize());
 	}
@@ -82,7 +82,7 @@ public class AcceptanceTest {
 	@Test
 	public void willSendGreetings_whenItsSomebodysBirthdayReadingFromJSON() throws Exception {
 
-		birthdayService.sendGreetings("employee_data.json", new XDate("2008/10/08"), "localhost", NONSTANDARD_PORT);
+		greetingService.sendGreetings("employee_data.json", new XDate("2008/10/08"), "localhost", NONSTANDARD_PORT);
 
 		assertEquals("message not sent?", 1, mailServer.getReceivedEmailSize());
 		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
