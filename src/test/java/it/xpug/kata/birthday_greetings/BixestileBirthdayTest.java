@@ -13,7 +13,7 @@ public class BixestileBirthdayTest {
 
     @Before
     public void setUp() throws Exception {
-        employee = new Employee("foo", "bar", "1976/02/29", "a@b.c");
+        employee = new Employee("foo", "bar", "1976/02/29", "a@b.c", "+1234567890");
     }
 
     @Test

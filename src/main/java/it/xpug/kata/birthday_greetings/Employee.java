@@ -4,14 +4,16 @@ import java.text.ParseException;
 
 public class Employee {
 
-	private XDate birthDate;
-	private String lastName;
-	private String firstName;
-	private String email;
+	private final XDate birthDate;
+	private final String lastName;
+	private final String fax;
+	private final String firstName;
+	private final String email;
 
-	public Employee(String firstName, String lastName, String birthDate, String email) throws ParseException {
+	public Employee(String firstName, String lastName, String birthDate, String email, String fax) throws ParseException {
 		this.firstName = firstName;
 		this.lastName = lastName;
+		this.fax = fax;
 		this.birthDate = new XDate(birthDate);
 		this.email = email;
 	}
@@ -28,9 +30,13 @@ public class Employee {
 		return firstName;
 	}
 
+	public String getFax() {
+		return fax;
+	}
+
 	@Override
 	public String toString() {
-		return "Employee " + firstName + " " + lastName + " <" + email + "> born " + birthDate;
+		return "Employee " + firstName + " " + lastName + " <" + email + "> born " + birthDate + " fax " + fax;
 	}
 
 	@Override
@@ -44,6 +50,8 @@ public class Employee {
 				+ ((firstName == null) ? 0 : firstName.hashCode());
 		result = prime * result
 				+ ((lastName == null) ? 0 : lastName.hashCode());
+		result = prime * result
+				+ ((fax == null) ? 0 : fax.hashCode());
 		return result;
 	}
 
@@ -75,6 +83,11 @@ public class Employee {
 			if (other.lastName != null)
 				return false;
 		} else if (!lastName.equals(other.lastName))
+			return false;
+		if (fax == null) {
+			if (other.fax != null)
+				return false;
+		} else if (!fax.equals(other.fax))
 			return false;
 		return true;
 	}
