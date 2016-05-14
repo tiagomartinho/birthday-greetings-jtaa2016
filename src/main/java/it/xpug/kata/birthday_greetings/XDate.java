@@ -30,7 +30,19 @@ public class XDate {
 	}
 
 	public boolean isSameDay(XDate anotherDate) {
-		return sameDayAndMonth(anotherDate);
+		if (!isLeapYear() && (isFebruaryTwentyNine() || anotherDate.isFebruaryTwentyNine()) ) {
+			return isFirstMarch() || anotherDate.isFirstMarch();
+		} else {
+			return sameDayAndMonth(anotherDate);
+		}
+	}
+
+	private boolean isFirstMarch() {
+		return getDay() == 1 && getMonth() == 3;
+	}
+
+	private boolean isFebruaryTwentyNine() {
+		return getDay() == 29 && getMonth() == 2;
 	}
 
 	private boolean sameDayAndMonth(XDate anotherDate) {
