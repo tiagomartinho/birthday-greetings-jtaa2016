@@ -50,4 +50,20 @@ public class XDateTest {
 		XDate firstMarch =  new XDate("2016/03/01");
 		assertTrue(firstMarch.isLeapYear());
 	}
+
+	@Test
+	public void isEaster() throws Exception {
+		XDate easter =  new XDate("2016/03/27");
+		assertTrue(easter.isEaster());
+		XDate anotherEaster =  new XDate("2015/04/05");
+		assertTrue(anotherEaster.isEaster());
+	}
+
+	@Test
+	public void isNotEaster() throws Exception {
+		XDate notEaster =  new XDate("2016/03/01");
+		assertFalse(notEaster.isEaster());
+		XDate anotherNotEaster =  new XDate("2015/04/01");
+		assertFalse(anotherNotEaster.isEaster());
+	}
 }
