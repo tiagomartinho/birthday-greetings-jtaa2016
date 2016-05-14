@@ -59,6 +59,20 @@ public class AcceptanceTest {
 	}
 
 	@Test
+	public void willSendGreetings_whenItsEaster() throws Exception {
+
+		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/03/23"), "localhost", NONSTANDARD_PORT);
+
+		assertEquals("message not sent?", 4, mailServer.getReceivedEmailSize());
+		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
+		assertEquals("Harry Brown ti facciamo un augurio di una Pasqua serena.", message.getBody());
+		assertEquals("Auguri di Buona Pasqua!", message.getHeaderValue("Subject"));
+		String[] recipients = message.getHeaderValues("To");
+		assertEquals(1, recipients.length);
+		assertEquals("harry.b@mycorp.com", recipients[0].toString());
+	}
+
+	@Test
 	public void willNotSendEmailsWhenNobodysBirthday() throws Exception {
 		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/01/01"), "localhost", NONSTANDARD_PORT);
 

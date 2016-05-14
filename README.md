@@ -50,7 +50,7 @@ L'implementazione dei requisiti va fatta senza l'ausilio di alcun framework o li
 
 ### 5. Modificate il codice in modo da poter inviare anche gli auguri di Pasqua
   Il messaggio deve contenere il seguente testo:
-  Oggetto: Auguti di Buona Pasqua!
+  Oggetto: Auguri di Buona Pasqua!
   Corpo: <Nome> <Cognome> ti facciamo un augurio di una Pasqua serena.
 
   <Nome> e <Cognome> vanno sostituiti con il rispettivo Nome e Cognome della

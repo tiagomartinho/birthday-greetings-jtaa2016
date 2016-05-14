@@ -28,7 +28,19 @@ public class BirthdayService {
 					sendFax(smtpHost, smtpPort, employee);
 				}
 			}
+			if(xDate.isEaster()) {
+				sendEasterEmail(smtpHost, smtpPort, employee);
+			}
 		}
+	}
+
+	private void sendEasterEmail(String smtpHost, int smtpPort, Employee employee) throws MessagingException {
+		String recipient = employee.getEmail();
+		String body = "%NAME% %SURNAME% ti facciamo un augurio di una Pasqua serena.";
+		body = body.replace("%NAME%", employee.getFirstName());
+		body = body.replace("%SURNAME%", employee.getLastName());
+		String subject = "Auguri di Buona Pasqua!";
+		sendMessage(smtpHost, smtpPort, "sender@here.com", subject, body, recipient);
 	}
 
 	private void sendFax(String smtpHost, int smtpPort, Employee employee) throws MessagingException {
