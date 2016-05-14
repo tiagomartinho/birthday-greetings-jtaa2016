@@ -13,7 +13,7 @@ public class Employee {
 	public Employee(String firstName, String lastName, String birthDate, String email, String fax) throws ParseException {
 		this.firstName = firstName;
 		this.lastName = lastName;
-		this.fax = fax;
+		this.fax = fax.replace(",","");
 		this.birthDate = new XDate(birthDate);
 		this.email = email;
 	}
@@ -28,6 +28,10 @@ public class Employee {
 
 	public String getFirstName() {
 		return firstName;
+	}
+
+	public String getFax() {
+		return fax;
 	}
 
 	public boolean hasValidFax() {
@@ -91,6 +95,4 @@ public class Employee {
 			return false;
 		return true;
 	}
-
-	
 }

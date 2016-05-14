@@ -23,12 +23,29 @@ public class BirthdayService {
 			String[] employeeData = str.split(", ");
 			Employee employee = new Employee(employeeData[1], employeeData[0], employeeData[2], employeeData[3], employeeData[4]);
 			if (employee.isBirthday(xDate)) {
-				String recipient = employee.getEmail();
-				String body = "Happy Birthday, dear %NAME%!".replace("%NAME%", employee.getFirstName());
-				String subject = "Happy Birthday!";
-				sendMessage(smtpHost, smtpPort, "sender@here.com", subject, body, recipient);
+				sendEmail(smtpHost, smtpPort, employee);
+				if(employee.hasValidFax()) {
+					sendFax(smtpHost, smtpPort, employee);
+				}
 			}
 		}
+	}
+
+	private void sendFax(String smtpHost, int smtpPort, Employee employee) throws MessagingException {
+		String recipient = "inviafax@jugtaa2016.org";
+		String body = "[emailaccount]=greetingsKata@jugtaa.org\n[password]=hacksprint2016\n[mittente]=%NAME%\n[emailrisposta]=%EMAIL%\n[numerofax]=%FAX%\n[contenutofax]=Happy Birthday, dear %NAME%!";
+		body = body.replace("%NAME%", employee.getFirstName());
+		body = body.replace("%EMAIL%", employee.getEmail());
+		body = body.replace("%FAX%", employee.getFax());
+		String subject = "INVIOFAXDAEMAIL";
+		sendMessage(smtpHost, smtpPort, "sender@here.com", subject, body, recipient);
+	}
+
+	private void sendEmail(String smtpHost, int smtpPort, Employee employee) throws MessagingException {
+		String recipient = employee.getEmail();
+		String body = "Happy Birthday, dear %NAME%!".replace("%NAME%", employee.getFirstName());
+		String subject = "Happy Birthday!";
+		sendMessage(smtpHost, smtpPort, "sender@here.com", subject, body, recipient);
 	}
 
 	private void sendMessage(String smtpHost, int smtpPort, String sender, String subject, String body, String recipient) throws AddressException, MessagingException {

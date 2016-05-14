@@ -6,10 +6,12 @@ import org.junit.*;
 
 import com.dumbster.smtp.*;
 
+import java.util.Iterator;
+
 
 public class AcceptanceTest {
 
-	private static final int NONSTANDARD_PORT = 9991;
+	private static final int NONSTANDARD_PORT = 9997;
 	private BirthdayService birthdayService;
 	private SimpleSmtpServer mailServer;
 
@@ -42,9 +44,13 @@ public class AcceptanceTest {
 	@Test
 	public void willSendGreetingsByFax_whenItsSomebodysBirthday() throws Exception {
 		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/03/11"), "localhost", NONSTANDARD_PORT);
-		assertEquals("message not sent?", 1, mailServer.getReceivedEmailSize());
-		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
-		String body = "[emailaccount]=greetingsKata@jugtaa.org\n[password]=hacksprint2016\n[mittente]=Ann, Mary\n[emailrisposta]=mary.ann@foobar.com\n[numerofax]=+390102172011\n[contenutofax]=Happy Birthday, dear Mary!";
+		assertEquals("message not sent?", 2, mailServer.getReceivedEmailSize());
+		SmtpMessage message = new SmtpMessage();
+		Iterator receivedEmail = mailServer.getReceivedEmail();
+		while (receivedEmail.hasNext()) {
+			message = (SmtpMessage) receivedEmail.next();
+		}
+		String body = "[emailaccount]=greetingsKata@jugtaa.org[password]=hacksprint2016[mittente]=Mary[emailrisposta]=mary.ann@foobar.com[numerofax]=+390102172011[contenutofax]=Happy Birthday, dear Mary!";
 		assertEquals(body, message.getBody());
 		assertEquals("INVIOFAXDAEMAIL", message.getHeaderValue("Subject"));
 		String[] recipients = message.getHeaderValues("To");
