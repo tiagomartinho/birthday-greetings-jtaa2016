@@ -1,7 +1,5 @@
 package it.xpug.kata.birthday_greetings;
 
-import org.json.JSONObject;
-
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -41,12 +39,13 @@ public class BirthdayService {
             json = json.replace("[", "").replace("]", "");
             String[] employeeData = json.split("(?<=\\},)");
             for (String employeeJSON:employeeData) {
-                JSONObject obj = new JSONObject(employeeJSON.replace("},","}"));
-                String surname = obj.getString("last_name");
-                String name = obj.getString("first_name");
-                String dateOfBirth = obj.getString("date_of_birth");
-                String email = obj.getString("email");
-                String faxNumber = obj.getString("fax_number");
+                employeeJSON = employeeJSON.replace("},","}");
+                JSONUtilites jsonUtilites = new JSONUtilites(employeeJSON);
+                String surname = jsonUtilites.extractValue("last_name");
+                String name = jsonUtilites.extractValue("first_name");
+                String dateOfBirth = jsonUtilites.extractValue("date_of_birth");
+                String email = jsonUtilites.extractValue("email");
+                String faxNumber = jsonUtilites.extractValue("fax_number");
                 Employee employee = new Employee(name,surname,dateOfBirth,email,faxNumber);
                 employees.add(employee);
             }
