@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e1394b7-348f-46b3-8f12-0e5873bf2794" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/Employee.java" afterPath="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/Employee.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/EmployeeTest.java" afterPath="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/EmployeeTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java" afterPath="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java" />
     </list>
     <ignored path="birthday-greetings.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,11 +27,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="AcceptanceTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="AcceptanceTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-399">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+            <state relative-caret-position="106">
+              <caret line="42" column="63" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,8 +42,8 @@
       <file leaf-file-name="employee_data.csv" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/employee_data.csv">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
+            <state relative-caret-position="57">
+              <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="21" />
               <folding />
             </state>
           </provider>
@@ -52,8 +52,8 @@
       <file leaf-file-name="BirthdayService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/BirthdayService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="175">
-              <caret line="23" column="127" selection-start-line="23" selection-start-column="127" selection-end-line="23" selection-end-column="127" />
+            <state relative-caret-position="342">
+              <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -123,7 +123,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmployeeTest.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmployeeTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/EmployeeTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="205">
@@ -165,7 +165,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java" />
         <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/BixestileBirthdayTest" />
         <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/XDateTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/XDate.java" />
@@ -173,6 +172,7 @@
         <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/BixestileBirthdayTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/Employee.java" />
         <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/EmployeeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java" />
       </list>
     </option>
   </component>
@@ -355,7 +355,7 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="JUnit.EmployeeTest.testFax">
+  <component name="RunManager" selected="JUnit.AcceptanceTest.willSendGreetingsByFax_whenItsSomebodysBirthday">
     <configuration default="false" name="AcceptanceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -394,32 +394,6 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" value="it.xpug.kata.birthday_greetings" />
       <option name="MAIN_CLASS_NAME" value="it.xpug.kata.birthday_greetings.EmployeeTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="BixestileBirthdayTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="it.xpug.kata.birthday_greetings.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="birthday-greetings" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="it.xpug.kata.birthday_greetings" />
-      <option name="MAIN_CLASS_NAME" value="it.xpug.kata.birthday_greetings.BixestileBirthdayTest" />
       <option name="METHOD_NAME" />
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
@@ -473,6 +447,32 @@
       <option name="PACKAGE_NAME" value="it.xpug.kata.birthday_greetings" />
       <option name="MAIN_CLASS_NAME" value="it.xpug.kata.birthday_greetings.EmployeeTest" />
       <option name="METHOD_NAME" value="testFax" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="AcceptanceTest.willSendGreetingsByFax_whenItsSomebodysBirthday" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="it.xpug.kata.birthday_greetings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <module name="birthday-greetings" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="it.xpug.kata.birthday_greetings" />
+      <option name="MAIN_CLASS_NAME" value="it.xpug.kata.birthday_greetings.AcceptanceTest" />
+      <option name="METHOD_NAME" value="willSendGreetingsByFax_whenItsSomebodysBirthday" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
@@ -890,17 +890,17 @@
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="JUnit.AcceptanceTest" />
       <item index="1" class="java.lang.String" itemvalue="JUnit.EmployeeTest" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.BixestileBirthdayTest" />
-      <item index="3" class="java.lang.String" itemvalue="JUnit.XDateTest" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeTest.testFax" />
+      <item index="2" class="java.lang.String" itemvalue="JUnit.XDateTest" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.EmployeeTest.testFax" />
+      <item index="4" class="java.lang.String" itemvalue="JUnit.AcceptanceTest.willSendGreetingsByFax_whenItsSomebodysBirthday" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="JUnit.EmployeeTest.testFax" />
-        <item index="1" class="java.lang.String" itemvalue="JUnit.XDateTest" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest" />
-        <item index="3" class="java.lang.String" itemvalue="JUnit.BixestileBirthdayTest" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.AcceptanceTest" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.AcceptanceTest.willSendGreetingsByFax_whenItsSomebodysBirthday" />
+        <item index="1" class="java.lang.String" itemvalue="JUnit.AcceptanceTest" />
+        <item index="2" class="java.lang.String" itemvalue="JUnit.EmployeeTest.testFax" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.XDateTest" />
+        <item index="4" class="java.lang.String" itemvalue="JUnit.EmployeeTest" />
       </list>
     </recent_temporary>
   </component>
@@ -919,7 +919,7 @@
       <updated>1463224793973</updated>
       <workItem from="1463224795222" duration="221000" />
       <workItem from="1463225040329" duration="1105000" />
-      <workItem from="1463226545333" duration="1772000" />
+      <workItem from="1463226545333" duration="2266000" />
     </task>
     <servers />
   </component>
@@ -927,11 +927,11 @@
     <history-entry file="AcceptanceTest - 2016.05.14 at 14h 13m 48s.xml">
       <configuration name="AcceptanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BixestileBirthdayTest - 2016.05.14 at 14h 02m 32s.xml">
-      <configuration name="BixestileBirthdayTest" configurationId="JUnit" />
+    <history-entry file="AcceptanceTest - 2016.05.14 at 14h 26m 45s.xml">
+      <configuration name="AcceptanceTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="BixestileBirthdayTest - 2016.05.14 at 14h 03m 32s.xml">
-      <configuration name="BixestileBirthdayTest" configurationId="JUnit" />
+    <history-entry file="AcceptanceTest_willSendGreetingsByFax_whenItsSomebodysBirthday - 2016.05.14 at 14h 26m 52s.xml">
+      <configuration name="AcceptanceTest.willSendGreetingsByFax_whenItsSomebodysBirthday" configurationId="JUnit" />
     </history-entry>
     <history-entry file="BixestileBirthdayTest - 2016.05.14 at 14h 07m 20s.xml">
       <configuration name="BixestileBirthdayTest" configurationId="JUnit" />
@@ -956,14 +956,23 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3098000" />
+    <option name="totallyTimeSpent" value="3592000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977098" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32671756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -976,6 +985,7 @@
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24959612" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -986,7 +996,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -1115,14 +1124,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/BirthdayService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="23" column="127" selection-start-line="23" selection-start-column="127" selection-end-line="23" selection-end-column="127" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/BixestileBirthdayTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="23">
@@ -1130,24 +1131,6 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-399">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/employee_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="51" selection-start-line="4" selection-start-column="51" selection-end-line="4" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1177,6 +1160,32 @@
         <state relative-caret-position="205">
           <caret line="21" column="46" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="46" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/BirthdayService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="30" column="9" selection-start-line="30" selection-start-column="9" selection-end-line="30" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/employee_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="57">
+          <caret line="3" column="16" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/it/xpug/kata/birthday_greetings/AcceptanceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="106">
+          <caret line="42" column="63" selection-start-line="42" selection-start-column="16" selection-end-line="42" selection-end-column="63" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

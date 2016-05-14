@@ -40,6 +40,19 @@ public class AcceptanceTest {
 	}
 
 	@Test
+	public void willSendGreetingsByFax_whenItsSomebodysBirthday() throws Exception {
+		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/03/11"), "localhost", NONSTANDARD_PORT);
+		assertEquals("message not sent?", 1, mailServer.getReceivedEmailSize());
+		SmtpMessage message = (SmtpMessage) mailServer.getReceivedEmail().next();
+		String body = "[emailaccount]=greetingsKata@jugtaa.org\n[password]=hacksprint2016\n[mittente]=Ann, Mary\n[emailrisposta]=mary.ann@foobar.com\n[numerofax]=+390102172011\n[contenutofax]=Happy Birthday, dear Mary!";
+		assertEquals(body, message.getBody());
+		assertEquals("INVIOFAXDAEMAIL", message.getHeaderValue("Subject"));
+		String[] recipients = message.getHeaderValues("To");
+		assertEquals(1, recipients.length);
+		assertEquals("inviafax@jugtaa2016.org", recipients[0].toString());
+	}
+
+	@Test
 	public void willNotSendEmailsWhenNobodysBirthday() throws Exception {
 		birthdayService.sendGreetings("employee_data.csv", new XDate("2008/01/01"), "localhost", NONSTANDARD_PORT);
 
