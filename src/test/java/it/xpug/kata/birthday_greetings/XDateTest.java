@@ -39,4 +39,15 @@ public class XDateTest {
 		assertFalse(base.equals(different));
 	}
 
+	@Test
+	public void isNotLeapYear() throws Exception {
+		XDate firstMarch =  new XDate("2015/03/01");
+		assertFalse(firstMarch.isLeapYear());
+	}
+
+	@Test
+	public void isLeapYear() throws Exception {
+		XDate firstMarch =  new XDate("2016/03/01");
+		assertTrue(firstMarch.isLeapYear());
+	}
 }

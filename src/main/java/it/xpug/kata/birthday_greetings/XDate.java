@@ -25,6 +25,10 @@ public class XDate {
 		return 1 + getPartOfDate(GregorianCalendar.MONTH);
 	}
 
+	public int getYear() {
+		return getPartOfDate(GregorianCalendar.YEAR);
+	}
+
 	public boolean isSameDay(XDate anotherDate) {
 		return sameDayAndMonth(anotherDate);
 	}
@@ -50,5 +54,9 @@ public class XDate {
 		GregorianCalendar calendar = new GregorianCalendar();
 		calendar.setTime(date);
 		return calendar.get(part);
+	}
+
+	public boolean isLeapYear() {
+		return new Date(this.getYear(), 1, 29).getMonth() == 1;
 	}
 }
