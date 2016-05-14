@@ -11,7 +11,7 @@ import java.util.Iterator;
 
 public class AcceptanceTest {
 
-	private static final int NONSTANDARD_PORT = 9988;
+	private static final int NONSTANDARD_PORT = 9978;
 	private BirthdayService birthdayService;
 	private SimpleSmtpServer mailServer;
 

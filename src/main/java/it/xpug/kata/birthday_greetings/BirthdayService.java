@@ -1,5 +1,7 @@
 package it.xpug.kata.birthday_greetings;
 
+import it.xpug.kata.birthday_greetings.EmployeeParser.EmployeeParser;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
@@ -7,49 +9,14 @@ import javax.mail.Transport;
 import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
-import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.IOException;
 import java.text.ParseException;
-import java.util.ArrayList;
 import java.util.List;
 
 public class BirthdayService {
 
-    public void sendGreetings(String fileName, XDate xDate, String smtpHost, int smtpPort) throws IOException, ParseException, AddressException, MessagingException {
-        List<Employee> employees = new ArrayList<Employee>();
-
-        BufferedReader in = new BufferedReader(new FileReader(fileName));
-        String str = "";
-        str = in.readLine(); // skip header
-        if (fileName.contains(".csv")) {
-            while ((str = in.readLine()) != null) {
-                String[] employeeData = str.split(", ");
-                Employee employee = new Employee(employeeData[1], employeeData[0], employeeData[2], employeeData[3], employeeData[4]);
-
-                employees.add(employee);
-            }
-        }
-
-        if (fileName.contains(".json")) {
-            String json = str;
-            while ((str = in.readLine()) != null) {
-                json += str;
-            }
-            json = json.replace("[", "").replace("]", "");
-            String[] employeeData = json.split("(?<=\\},)");
-            for (String employeeJSON:employeeData) {
-                employeeJSON = employeeJSON.replace("},","}");
-                JSONUtilites jsonUtilites = new JSONUtilites(employeeJSON);
-                String surname = jsonUtilites.extractValue("last_name");
-                String name = jsonUtilites.extractValue("first_name");
-                String dateOfBirth = jsonUtilites.extractValue("date_of_birth");
-                String email = jsonUtilites.extractValue("email");
-                String faxNumber = jsonUtilites.extractValue("fax_number");
-                Employee employee = new Employee(name,surname,dateOfBirth,email,faxNumber);
-                employees.add(employee);
-            }
-        }
+    public void sendGreetings(String fileName, XDate xDate, String smtpHost, int smtpPort) throws IOException, ParseException, MessagingException {
+        List<Employee> employees = EmployeeParser.parse(fileName);
 
         for (Employee employee:employees) {
             if (employee.isBirthday(xDate)) {
