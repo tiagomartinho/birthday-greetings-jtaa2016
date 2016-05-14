@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4e1394b7-348f-46b3-8f12-0e5873bf2794" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/XDate.java" afterPath="$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/XDate.java" />
-    </list>
+    <list default="true" id="4e1394b7-348f-46b3-8f12-0e5873bf2794" name="Default" comment="" />
     <ignored path="birthday-greetings.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -61,8 +59,8 @@
       <file leaf-file-name="XDate.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/XDate.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="31" column="35" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="35" />
+            <state relative-caret-position="171">
+              <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
               <folding>
                 <element signature="e#586#587#0" expanded="true" />
                 <element signature="e#628#629#0" expanded="true" />
@@ -885,7 +883,7 @@
       <updated>1463224793973</updated>
       <workItem from="1463224795222" duration="221000" />
       <workItem from="1463225040329" duration="1105000" />
-      <workItem from="1463226545333" duration="28000" />
+      <workItem from="1463226545333" duration="41000" />
     </task>
     <servers />
   </component>
@@ -922,7 +920,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1354000" />
+    <option name="totallyTimeSpent" value="1367000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="773" extended-state="6" />
@@ -1108,8 +1106,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/it/xpug/kata/birthday_greetings/XDate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="31" column="35" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="35" />
+        <state relative-caret-position="171">
+          <caret line="27" column="47" selection-start-line="27" selection-start-column="47" selection-end-line="27" selection-end-column="47" />
           <folding>
             <element signature="e#586#587#0" expanded="true" />
             <element signature="e#628#629#0" expanded="true" />
