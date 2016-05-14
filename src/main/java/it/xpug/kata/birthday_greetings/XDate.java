@@ -26,6 +26,10 @@ public class XDate {
 	}
 
 	public boolean isSameDay(XDate anotherDate) {
+		return sameDayAndMonth(anotherDate);
+	}
+
+	private boolean sameDayAndMonth(XDate anotherDate) {
 		return anotherDate.getDay() == this.getDay() && anotherDate.getMonth() == this.getMonth();
 	}
 
